@@ -335,7 +335,7 @@ main #main-section-2 {
     overflow: hidden;
     -o-object-fit: cover;
        object-fit: cover;
-    background-image: url(./images/image-hero-desktop.png);
+    background-image: url("../images/image-hero-desktop.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
