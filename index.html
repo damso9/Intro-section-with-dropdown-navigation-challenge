@@ -27,17 +27,16 @@
   <aside class="side-toggle">
     <img src="./images/icon-close-menu.svg" class="close-menu" alt="close menu icon">
     <ul class="side-toggle-list">
-      <li>Features
+      <li><span id="feature-mobile">Features</span>
         <img src="./images/icon-arrow-down.svg" class="feature-dropdown-img" alt="feature dropdown icon">
         <ul class="feature-dropdown">
-          <li><img src="./images/" alt="">
-            Todo List</li>
-          <li>Calendar</li>
-          <li>Reminders</li>
-          <li>Planning</li>
+          <li><img src="./images/icon-todo.svg" alt="todo icon">Todo List</li>
+          <li><img src="./images/icon-calendar.svg" alt="calendar">Calendar</li>
+          <li><img src="./images/icon-reminders.svg" alt="remider icon">Reminders</li>
+          <li><img src="./images/icon-planning.svg" >Planning</li>
         </ul>
       </li>
-        <li>Company
+        <li><span id="company-mobile">Company</span>
         <img src="./images/icon-arrow-down.svg" class="company-dropdown-img" alt="company dropdown icon">
           <ul class="company-dropdown">
             <li>History</li>
@@ -50,37 +49,89 @@
     </ul>
   </aside>
 
-  <header>
+  <header id="mobile-header">
 
     <nav>
       <img id="snap-logo" src="./images/logo.svg" alt="snap logo">
       <img id="icon-menu" src="./images/icon-menu.svg" alt="">
     </nav>
   </header>
+  <!-- Desktop Header Section -->
+  <header id="desktop-header">
+    <nav>
+      <section id="section-1">
+        <img src="./images/logo.svg" alt="snap-logo">
+          <ul>
+            <li ><span id="feature">Feature</span>
+              <img src="./images/icon-arrow-down.svg" class="featureDesktop-dropdown-img" alt="feature dropdown icon">
+              <ul class="featureDesktop-dropdown">
+                <li><img src="./images/icon-todo.svg" alt="todo icon"><span>List</span></li>
+                <li><img src="./images/icon-calendar.svg" alt="calendar"><span>Calendar</span></li>
+                <li><img src="./images/icon-reminders.svg" alt="remider icon"><span>Reminders</span></li>
+                <li><img src="./images/icon-planning.svg" ><span>Planning</span></li>
+              </ul>
+            </li>
+            <li><span id="company">Company</span>
+              <img src="./images/icon-arrow-down.svg" class="companyDesktop-dropdown-img" alt="feature dropdown icon">
+              <ul class="companyDesktop-dropdown">
+                <li>History</li>
+                <li>Our Team</li>
+                <li>Blog</li>
+             
+              </ul>
+            </li>
+            <li>Careers</li>
+            <li>About</li>
+          </ul>
+      </section>
+      <section id="section-2">
+        <ul>
+          <li>Login</li>
+          <li id="register">Register</li>
+        </ul>
+      </section>
+    </nav>
+    
+  </header>
     <main>
-      <div class="mobile-hero">
-        <img src="./images/image-hero-mobile.png" alt="mobile image hero">
-      </div>
-      <h1>
-        Make remote work
-      </h1>
-      <p>  Get your team in sync, no matter your location. Streamline processes, 
-        create team rituals, and watch productivity soar.</p>
-        <button class="learn-more-btn">
-          Learn more
-        </button>
+      <section id="main-section-1">
+        <div class="mobile-hero">
+          <img src="./images/image-hero-mobile.png" alt="mobile image hero">
+        </div>
+        <div>
+          <h1>
+            Make 
+            <br>
+            remote work
+          </h1>
+          <p>  Get your team in sync, no matter your location. Streamline processes, 
+            create team rituals, and watch productivity soar.</p>
+            <button class="learn-more-btn">
+              Learn more
+            </button>
+            <footer>
+              <section class="mobile-footer-logo">
+                <img src="./images/client-databiz.svg" alt="">
+                <img src="./images/client-audiophile.svg" alt="">
+                <img src="./images/client-meet.svg" alt="">
+                <img src="./images/client-maker.svg" alt="">
+              </section>
+            </footer>
+        </div>
+      </section>
+      <section id="main-section-2">
+        <div>
+          <!-- <img src="" class="desktop-hero" alt="image desktop hero"> -->
+
+        </div>
+      </section>
+      
+
     </main>
     
 
 
-    <footer>
-      <section class="mobile-footer-logo">
-        <img src="./images/client-databiz.svg" alt="">
-        <img src="./images/client-audiophile.svg" alt="">
-        <img src="./images/client-meet.svg" alt="">
-        <img src="./images/client-maker.svg" alt="">
-      </section>
-    </footer>
+
   <!-- Features
   Company
   Careers
@@ -98,7 +149,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Damilola Ayodele</a>.
   </div>
 </body>
 </html>

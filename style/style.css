@@ -7,12 +7,41 @@
 
 html {
   font-size: 18px;
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
 }
 
 body {
   width: 100%;
   position: relative;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul li:hover {
+  color: #141414;
+}
+
+.hide {
+  display: none;
+}
+
+.side-toggle .side-toggle-list .feature-dropdown li img {
+  margin-right: 20px;
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+.side-toggle .side-toggle-list .feature-dropdown li, .side-toggle .side-toggle-list .company-dropdown li {
+  margin: 15px 0;
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .overlay {
@@ -25,48 +54,51 @@ body {
 
 .side-toggle {
   position: absolute;
-  width: 60%;
+  width: 0;
   right: 0;
   overflow-x: hidden;
   background-color: #fafafa;
   z-index: 3;
   height: 100%;
-  -webkit-transition: width 0.7s linear, display 0.7s linear;
-  transition: width 0.7s linear, display 0.7s linear;
+  -webkit-transition: width 0.3s linear, display 0.3s linear;
+  transition: width 0.3s linear, display 0.3s linear;
 }
 
 .side-toggle .close-menu {
   display: block;
+  margin: 10px;
   margin-left: auto;
-  border: 2px solid red;
   overflow-x: hidden;
 }
 
 .side-toggle .side-toggle-list {
-  border: 2px solid red;
   list-style-type: none;
   margin: 10px 0;
   overflow-x: hidden;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  color: dimgray;
+}
+
+.side-toggle .side-toggle-list > li {
+  margin: 0.5rem 0;
+  font-size: 0.8rem;
+}
+
+.side-toggle .side-toggle-list > li:hover {
+  cursor: pointer;
 }
 
 .side-toggle .side-toggle-list .hide {
   display: none;
 }
 
-.side-toggle .side-toggle-list .feature-dropdown li {
-  margin-left: 20px;
-}
-
-.side-toggle .side-toggle-list .company-dropdown li {
-  margin-left: 20px;
-}
-
-header {
-  border: 2px solid red;
+#mobile-header {
   padding: 10px;
 }
 
-header nav {
+#mobile-header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,31 +114,32 @@ header nav {
           align-items: center;
 }
 
-header nav img {
-  border: 2px solid red;
+#desktop-header {
+  display: none;
 }
 
-main {
-  text-align: center;
-}
-
-main .mobile-hero {
+main #main-section-1 .mobile-hero {
   padding: 10px 0;
 }
 
-main .mobile-hero img {
+main #main-section-1 .mobile-hero img {
   width: 100%;
   display: block;
 }
 
-main h1 {
+main #main-section-1 div h1 {
   font-size: 1.8rem;
   padding: 10px 0;
   color: #141414;
+  text-align: center;
 }
 
-main p {
-  font-size: .7rem;
+main #main-section-1 div h1 br {
+  display: none;
+}
+
+main #main-section-1 div p {
+  font-size: 0.7rem;
   color: dimgray;
   line-height: 1.2rem;
   text-align: center;
@@ -114,19 +147,29 @@ main p {
   word-wrap: break-word;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
-main button {
+main #main-section-1 div button {
   color: #fafafa;
   background: #141414;
   padding: 10px 20px;
   font-weight: 700;
   border: none;
   border-radius: 15px;
-  margin: 30px 0;
+  margin: 30px auto;
+  text-align: center;
+  display: block;
 }
 
-footer .mobile-footer-logo {
+main #main-section-1 div button:hover {
+  color: #141414;
+  background-color: #fafafa;
+  border: 2px solid #141414;
+  cursor: pointer;
+}
+
+main #main-section-1 div footer .mobile-footer-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,11 +181,163 @@ footer .mobile-footer-logo {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  border: 2px solid red;
 }
 
-footer .mobile-footer-logo img {
-  border: 2px solid red;
+main #main-section-1 div footer .mobile-footer-logo img {
   height: 4vh;
+}
+
+main #main-section-2 {
+  display: none;
+}
+
+@media only screen and (min-width: 800px) {
+  #mobile-header {
+    display: none;
+  }
+  #desktop-header {
+    display: block;
+    padding: 10px;
+    color: dimgray;
+    font-size: 0.8rem;
+  }
+  #desktop-header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #desktop-header nav #section-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #desktop-header nav #section-1 ul {
+    margin-left: 2rem;
+  }
+  #desktop-header nav #section-1 ul li {
+    display: inline-block;
+    margin: 0 1rem;
+  }
+  #desktop-header nav #section-1 ul li:hover {
+    color: #141414;
+    cursor: pointer;
+  }
+  #desktop-header nav #section-1 ul li .featureDesktop-dropdown {
+    position: absolute;
+    top: 3.5rem;
+    left: 2.5rem;
+    background: #fafafa;
+    -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  #desktop-header nav #section-1 ul li .featureDesktop-dropdown li {
+    display: block;
+    margin: 10px 20px;
+  }
+  #desktop-header nav #section-1 ul li .featureDesktop-dropdown li span {
+    margin-left: 20px;
+  }
+  #desktop-header nav #section-1 ul li .companyDesktop-dropdown {
+    position: absolute;
+    top: 3.5rem;
+    left: 12.5rem;
+    background: #fafafa;
+    -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  #desktop-header nav #section-1 ul li .companyDesktop-dropdown li {
+    display: block;
+    margin: 10px 20px;
+  }
+  #desktop-header nav #section-2 {
+    margin-right: 3.2rem;
+  }
+  #desktop-header nav #section-2 ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #desktop-header nav #section-2 ul #register {
+    margin-left: 2rem;
+    border: 2px solid dimgray;
+    padding: 10px 20px;
+    border-radius: 1.2rem;
+  }
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main #main-section-1 {
+    width: 100%;
+    text-align: left;
+    padding: 0 50px;
+  }
+  main #main-section-1 .mobile-hero img {
+    display: none;
+  }
+  main #main-section-1 div h1 {
+    text-align: left;
+    font-size: 4rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+  }
+  main #main-section-1 div h1 br {
+    display: block;
+  }
+  main #main-section-1 div p {
+    text-align: left;
+    margin: 0;
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+  }
+  main #main-section-1 div button {
+    margin: 0;
+    font-size: 0.9rem;
+    padding: 15px 25px;
+    margin-right: auto;
+    margin-bottom: 5rem;
+  }
+  main #main-section-1 div footer .mobile-footer-logo img {
+    height: 5vh;
+  }
+  main #main-section-2 {
+    display: block;
+    width: 100%;
+  }
+  main #main-section-2 div {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    -o-object-fit: cover;
+       object-fit: cover;
+    background-image: url(/images/image-hero-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 /*# sourceMappingURL=style.css.map */
