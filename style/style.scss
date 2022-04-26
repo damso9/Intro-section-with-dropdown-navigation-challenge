@@ -21,7 +21,7 @@ body {
 ul li {
   list-style-type: none;
   &:hover {
-    color: $almost-black
+    color: $almost-black;
   }
 }
 .hide {
@@ -29,7 +29,6 @@ ul li {
 }
 // Placeholder
 %borderImg img {
-   
   margin-right: 20px;
   height: 1.2rem;
   width: 1.2rem;
@@ -37,7 +36,7 @@ ul li {
 %listMargin {
   margin: 15px 0;
   margin-left: 20px;
-   
+
   display: flex;
   align-items: center;
 }
@@ -65,11 +64,10 @@ ul li {
     display: block;
     margin: 10px;
     margin-left: auto;
-     
+
     overflow-x: hidden;
   }
   .side-toggle-list {
-     
     list-style-type: none;
     margin: 10px 0;
     overflow-x: hidden;
@@ -78,26 +76,22 @@ ul li {
     margin-right: auto;
     color: $medium-grey;
     > li {
-       
       margin: 0.5rem 0;
       font-size: 0.8rem;
       &:hover {
-          cursor: pointer;
+        cursor: pointer;
       }
     }
     .hide {
       display: none;
     }
     .feature-dropdown {
-       
       li {
         @extend %listMargin;
         @extend %borderImg;
       }
     }
     .company-dropdown {
-       
-
       li {
         @extend %listMargin;
       }
@@ -106,7 +100,6 @@ ul li {
 }
 
 #mobile-header {
-   
   padding: 10px;
   nav {
     display: flex;
@@ -114,7 +107,6 @@ ul li {
     justify-content: space-between;
     align-items: center;
     img {
-       
     }
   }
 }
@@ -162,12 +154,11 @@ main {
         text-align: center;
         display: block;
         &:hover {
-            color: $almost-black;
-            background-color: $almost-white;
-            border: 2px solid $almost-black;
-            cursor: pointer
+          color: $almost-black;
+          background-color: $almost-white;
+          border: 2px solid $almost-black;
+          cursor: pointer;
         }
-        
       }
       footer {
         .mobile-footer-logo {
@@ -175,9 +166,8 @@ main {
           flex-direction: row;
           justify-content: space-between;
           width: 100%;
-           
+
           img {
-             
             height: 4vh;
           }
         }
@@ -195,7 +185,7 @@ main {
   }
   #desktop-header {
     display: block;
-     
+
     padding: 10px;
     color: $medium-grey;
     font-size: 0.8rem;
@@ -204,19 +194,17 @@ main {
       align-items: center;
       justify-content: space-between;
       #section-1 {
-         
         display: flex;
         justify-content: space-between;
         align-items: center;
         ul {
-           
           margin-left: 2rem;
           li {
             display: inline-block;
             margin: 0 1rem;
             &:hover {
-                color:$almost-black;
-                cursor: pointer;
+              color: $almost-black;
+              cursor: pointer;
             }
             .featureDesktop-dropdown {
               position: absolute;
@@ -228,7 +216,6 @@ main {
               li {
                 display: block;
 
-                 
                 margin: 10px 20px;
                 span {
                   margin-left: 20px;
@@ -244,7 +231,6 @@ main {
               li {
                 display: block;
 
-                 
                 margin: 10px 20px;
               }
             }
@@ -252,7 +238,6 @@ main {
         }
       }
       #section-2 {
-         
         margin-right: 3.2rem;
         ul {
           display: flex;
@@ -275,11 +260,10 @@ main {
     // justify-content: space-between;
     // width: 100%;
     #main-section-1 {
-       
       width: 100%;
       text-align: left;
       padding: 0 50px;
-   
+
       .mobile-hero img {
         display: none;
       }
@@ -305,19 +289,17 @@ main {
           padding: 15px 25px;
           margin-right: auto;
           margin-bottom: 5rem;
-
         }
         footer {
-            .mobile-footer-logo {
-                img {
-                    height: 5vh;
-                }
+          .mobile-footer-logo {
+            img {
+              height: 5vh;
             }
+          }
         }
       }
     }
     #main-section-2 {
-       
       display: block;
       width: 100%;
       div {
@@ -327,10 +309,10 @@ main {
         margin-right: auto;
         overflow: hidden;
         // height: 30rem;
-         
-          object-fit: cover;
 
-        background-image: url(/images/image-hero-desktop.png);
+        object-fit: cover;
+
+        background-image: url(./images/image-hero-desktop.png);
         background-repeat: no-repeat;
         background-size: cover;
         // img {
